@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+
+    <style>
+      body {
+  /* Center the form on the page */
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  min-width: 90px;
+  text-align: right;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: 0.5em;
+}
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <h3>Login Page</h3>
+      <hr/>
+
+      <form action="/check_login" method="GET">
+        <ul>
+          <li>
+            <label for="uname">Name:</label>
+            <input type="text" id="uname" name="user_name" value="Enter username">
+          </li>
+
+          <li>
+            <label for="mail">Email: </label>
+            <input tpe="email" id="mail" name="user_email">
+          </li>
+
+          <li>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="user_pwd">
+          </li>
+
+          <li class="button">
+              <button type="submit">Submit Data</button>
+          </li>
+        </ul>  
+      </form>
+    </div>
+  </body>
+</html>

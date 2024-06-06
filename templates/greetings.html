@@ -1,0 +1,18 @@
+{% extends "layoutemp.html" %}
+
+{% block title %} Greetings {% endblock %}
+
+{% block content %}
+
+{% if name %}
+<h2> Welcome  {{ name}} </h2>
+<p>
+  The url_for funtion is tested here:
+  {{ufr1}} is the url_for
+</p>
+{% else %}
+<h3> Hello World ! </h3>
+
+{% endif %}
+
+{% endblock content %}
