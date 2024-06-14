@@ -4,27 +4,21 @@
 <h3>Login Page</h3>
 <hr/>
 
-<form action="/check_login" method="GET">
-  <ul>
-    <li>
-      <label for="uname">Name:</label>
-      <input type="text" id="uname" name="user_name" value="Enter username">
-    </li>
-    
-    <li>
-      <label for="mail">Email: </label>
-      <input tpe="email" id="mail" name="user_email">
-    </li>
-    
-    <li>
-      <label for="pwd">Password</label>
-      <input type="password" id="pwd" name="user_pwd">
-    </li>
-    
-    <li class="button">
-      <button type="submit">Submit Data</button>
-    </li>
-  </ul>  
+<form action="#" method="POST">
+  <div>
+  {{form.email.label}}
+  {{form.email}}
+  </div>
+
+ <div>
+  {{form.password.label}}
+  {{form.password}}
+  </div>
+
+  <div>
+    {{form.submit(class='btn, btn-outline-info' )}}
+  </div>
+
 </form>
 
 {% endblock content %}

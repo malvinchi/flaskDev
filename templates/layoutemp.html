@@ -33,6 +33,15 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
+          {% with  messages=get_flashed_messages() %}
+          {% if messages %}
+          {% for message in messages %}
+          <div>
+            {{message}}
+            </div>
+          {% endfor%}
+          {% endif%}
+          {% endwith %}
           {% block content %}{% endblock %}
         </div>
         <div class="col-md-4">
