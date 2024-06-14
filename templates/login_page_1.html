@@ -5,6 +5,8 @@
 <hr/>
 
 <form action="#" method="POST">
+  {{form.csrf_token}}
+
   <div>
   {{form.email.label}}
   {{form.email}}
