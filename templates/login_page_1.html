@@ -4,7 +4,7 @@
 <h3>Login Page</h3>
 <hr/>
 
-<form action="#" method="POST">
+<form action="#" method="POST" enctype="multipart/form-data">
   {{form.csrf_token}}
 
   <div>
@@ -16,6 +16,11 @@
   {{form.password.label}}
   {{form.password}}
   </div>
+
+ <div>
+   {{form.fileadd.label}}
+   {{form.fileadd}}
+   </div>
 
   <div>
     {{form.submit(class='btn, btn-outline-info' )}}

@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, EmailField, SubmitField
+from wtforms import StringField, PasswordField, EmailField, SubmitField, FileField
 from wtforms.validators import DataRequired, Length, EqualTo
 
 #create the Registration Form
@@ -15,4 +15,5 @@ class RegistrationForm(FlaskForm):
 class LoginForm(FlaskForm):
     email=EmailField("Email", validators=[DataRequired()])
     password=PasswordField("Password", validators=[DataRequired()])
+    fileadd=FileField("Attach File")
     submit=SubmitField(" Login Here")
